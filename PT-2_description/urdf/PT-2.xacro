@@ -1,0 +1,634 @@
+<?xml version="1.0" ?>
+<robot name="PT-2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find PT-2_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find PT-2_description)/urdf/PT-2.trans" />
+<xacro:include filename="$(find PT-2_description)/urdf/PT-2.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.027131778182013722 -0.009733860759561438 0.014001989342824386" rpy="0 0 0"/>
+    <mass value="0.018537346732997912"/>
+    <inertia ixx="1.6e-05" iyy="1.5e-05" izz="2.7e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo1_1">
+  <inertial>
+    <origin xyz="-0.024601724218867728 0.005874591954571153 -0.008916884410576413" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="6e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00293 0.015408 -0.028015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00293 0.015408 -0.028015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1_1">
+  <inertial>
+    <origin xyz="2.855842683446852e-07 -9.536126397233918e-07 -0.0003168703418373123" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.037508 0.009533 -0.044325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.037508 0.009533 -0.044325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="-0.007082452611160375 0.008894973400524621 0.00877736981047849" rpy="0 0 0"/>
+    <mass value="0.013445523750573762"/>
+    <inertia ixx="4e-06" iyy="5e-06" izz="7e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.030508 0.009533 -0.045325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.030508 0.009533 -0.045325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo2_1">
+  <inertial>
+    <origin xyz="-0.024601494627471847 0.008916310887469312 -0.00586972037018979" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="5e-06" iyy="6e-06" izz="9e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.013108 0.018538 -0.071199" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.013108 0.018538 -0.071199" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__1__1">
+  <inertial>
+    <origin xyz="5.151756642673977e-07 0.00031629681873018844 -2.659374006702686e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.047686 0.034848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.047686 0.034848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="-0.04075801081477781 0.024324125467075988 3.1058543883966117e-07" rpy="0 0 0"/>
+    <mass value="0.015570832110198175"/>
+    <inertia ixx="9e-06" iyy="8e-06" izz="1.5e-05" ixy="-1e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.054686 0.035848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.054686 0.035848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="-0.08999954081720796 -3.770897828957176e-07 3.105854562007737e-07" rpy="0 0 0"/>
+    <mass value="0.026038399558895264"/>
+    <inertia ixx="2e-06" iyy="7.1e-05" izz="7.1e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.107686 0.024848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.107686 0.024848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_2_1">
+  <inertial>
+    <origin xyz="-0.001983339573878251 -0.009250564104101511 3.1058544604223304e-07" rpy="0 0 0"/>
+    <mass value="0.004655156929618343"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.287686 0.024848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.287686 0.024848 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo3_1">
+  <inertial>
+    <origin xyz="-0.005874509861562127 -0.008917065067035136 -0.024197965195677476" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="9e-06" iyy="6e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.296811 0.026843 -0.089729" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.296811 0.026843 -0.089729" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__2__1">
+  <inertial>
+    <origin xyz="5.151756642951533e-07 -0.00031705099829608917 6.575169154698912e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.302686 0.010533 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.302686 0.010533 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="2.7601311473501866e-05 0.028342884401498736 -0.0070231248633810806" rpy="0 0 0"/>
+    <mass value="0.013894154324210883"/>
+    <inertia ixx="5e-06" iyy="3e-06" izz="5e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.302686 0.009533 -0.082507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.302686 0.009533 -0.082507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rod_02_v1_1">
+  <inertial>
+    <origin xyz="0.05000045918279156 -3.7708978290612594e-07 8.099405889028244e-08" rpy="0 0 0"/>
+    <mass value="0.005840220743023432"/>
+    <inertia ixx="0.0" iyy="5e-06" izz="5e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.322686 -0.035467 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/rod_02_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.322686 -0.035467 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/rod_02_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1">
+  <inertial>
+    <origin xyz="0.008606495324546382 0.0052748319854056674 8.24990067649356e-08" rpy="0 0 0"/>
+    <mass value="0.005673941122982631"/>
+    <inertia ixx="2e-06" iyy="3e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.222686 -0.035467 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.222686 -0.035467 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo4_1">
+  <inertial>
+    <origin xyz="-0.008916228794460246 0.005874591954570116 -0.024198194787073232" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="6e-06" iyy="9e-06" izz="5e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.189066 -0.026642 -0.099907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.189066 -0.026642 -0.099907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__3__1">
+  <inertial>
+    <origin xyz="-0.0003162147257211312 -9.536126406375911e-07 -2.045902093017471e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.172756 -0.032517 -0.085685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.172756 -0.032517 -0.085685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_1">
+  <inertial>
+    <origin xyz="0.0035034589457641485 8.661795096664981e-05 -0.007000148597336928" rpy="0 0 0"/>
+    <mass value="0.0030789946205401243"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.171756 -0.032517 -0.092685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.171756 -0.032517 -0.092685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo5_1">
+  <inertial>
+    <origin xyz="-0.005869571772854049 0.008916310887468488 -0.024198424378469155" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="9e-06" iyy="6e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.151886 -0.023512 -0.110085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.151886 -0.023512 -0.110085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__4__1">
+  <inertial>
+    <origin xyz="5.151756642673977e-07 0.000316296818729315 -9.547115899372072e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.157756 -0.007202 -0.095863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.157756 -0.007202 -0.095863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_7_1">
+  <inertial>
+    <origin xyz="4.5918279345524837e-07 -0.0035212546622750093 -0.011783949969478943" rpy="0 0 0"/>
+    <mass value="0.0024697393548202117"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.157756 -0.006202 -0.102863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.157756 -0.006202 -0.102863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/link_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo6_1">
+  <inertial>
+    <origin xyz="-0.0241978165983405 0.0058696538658621275 -0.008917066165985338" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.133356 0.013668 -0.103483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.133356 0.013668 -0.103483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__5__1">
+  <inertial>
+    <origin xyz="2.855842682336629e-07 -9.536126408249412e-07 -0.0003170520972461677" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.147578 0.007798 -0.119793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.147578 0.007798 -0.119793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/servo_horn_v1__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tool-01_v1_1">
+  <inertial>
+    <origin xyz="-0.0022016268328944044 -1.0036474157997313e-05 0.011860327228265674" rpy="0 0 0"/>
+    <mass value="0.00259877806362243"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.140578 0.007798 -0.120793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/tool-01_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.140578 0.007798 -0.120793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://PT-2_description/meshes/tool-01_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin xyz="-0.00293 -0.015408 0.028015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="servo1_1"/>
+</joint>
+
+<joint name="Rev2" type="revolute">
+  <origin xyz="-0.034578 0.005875 0.01631" rpy="0 0 0"/>
+  <parent link="servo1_1"/>
+  <child link="servo_horn_v1_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin xyz="0.007 0.0 0.001" rpy="0 0 0"/>
+  <parent link="servo_horn_v1_1"/>
+  <child link="link_1_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin xyz="0.0174 -0.009005 0.025874" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="servo2_1"/>
+</joint>
+
+<joint name="Rev5" type="revolute">
+  <origin xyz="-0.034578 -0.01631 -0.00587" rpy="0 0 0"/>
+  <parent link="servo2_1"/>
+  <child link="servo_horn_v1__1__1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin xyz="-0.007 -0.001 0.0" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__1__1"/>
+  <child link="link_2_1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin xyz="-0.053 0.011 0.0" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="link_3_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin xyz="-0.18 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="link_3_2_1"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin xyz="-0.009125 -0.001995 0.0244" rpy="0 0 0"/>
+  <parent link="link_3_2_1"/>
+  <child link="servo3_1"/>
+</joint>
+
+<joint name="Rev10" type="revolute">
+  <origin xyz="-0.005875 0.01631 -0.014222" rpy="0 0 0"/>
+  <parent link="servo3_1"/>
+  <child link="servo_horn_v1__2__1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid11" type="fixed">
+  <origin xyz="0.0 0.001 0.007" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__2__1"/>
+  <child link="link_4_1"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin xyz="-0.02 0.045 -0.007" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="rod_02_v1_1"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin xyz="0.1 0.0 0.0" rpy="0 0 0"/>
+  <parent link="rod_02_v1_1"/>
+  <child link="link_5_1"/>
+</joint>
+
+<joint name="Rigid14" type="fixed">
+  <origin xyz="0.03362 -0.008825 0.0244" rpy="0 0 0"/>
+  <parent link="link_5_1"/>
+  <child link="servo4_1"/>
+</joint>
+
+<joint name="Rev15" type="revolute">
+  <origin xyz="0.01631 0.005875 -0.014222" rpy="0 0 0"/>
+  <parent link="servo4_1"/>
+  <child link="servo_horn_v1__3__1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin xyz="0.001 0.0 0.007" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__3__1"/>
+  <child link="link_6_1"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin xyz="0.01987 -0.009005 0.0174" rpy="0 0 0"/>
+  <parent link="link_6_1"/>
+  <child link="servo5_1"/>
+</joint>
+
+<joint name="Rev19" type="revolute">
+  <origin xyz="-0.00587 -0.01631 -0.014222" rpy="0 0 0"/>
+  <parent link="servo5_1"/>
+  <child link="servo_horn_v1__4__1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid20" type="fixed">
+  <origin xyz="0.0 -0.001 0.007" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__4__1"/>
+  <child link="link_7_1"/>
+</joint>
+
+<joint name="Rigid21" type="fixed">
+  <origin xyz="0.0244 -0.01987 0.00062" rpy="0 0 0"/>
+  <parent link="link_7_1"/>
+  <child link="servo6_1"/>
+</joint>
+
+<joint name="Rev22" type="revolute">
+  <origin xyz="-0.014222 0.00587 0.01631" rpy="0 0 0"/>
+  <parent link="servo6_1"/>
+  <child link="servo_horn_v1__5__1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid23" type="fixed">
+  <origin xyz="0.007 0.0 0.001" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__5__1"/>
+  <child link="tool-01_v1_1"/>
+</joint>
+
+</robot>
