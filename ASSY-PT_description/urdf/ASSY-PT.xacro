@@ -1,0 +1,634 @@
+<?xml version="1.0" ?>
+<robot name="ASSY-PT" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find ASSY-PT_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find ASSY-PT_description)/urdf/ASSY-PT.trans" />
+<xacro:include filename="$(find ASSY-PT_description)/urdf/ASSY-PT.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.02719159800933449 -0.009674023349001718 0.014001989342824307" rpy="0 0 0"/>
+    <mass value="0.018537346732997912"/>
+    <inertia ixx="1.6e-05" iyy="1.5e-05" izz="2.7e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo1_1">
+  <inertial>
+    <origin xyz="-0.02419865197248028 0.005870523936865593 -0.008916884410576816" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="6e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.002593 0.015745 -0.028015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.002593 0.015745 -0.028015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1_1">
+  <inertial>
+    <origin xyz="4.502101283061777e-07 -8.354163728331587e-08 -0.0003168703418377078" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.016816 0.009875 -0.044325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.016816 0.009875 -0.044325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="-0.007082287985300492 0.00889584347152707 0.008777369810478143" rpy="0 0 0"/>
+    <mass value="0.013445523750573762"/>
+    <inertia ixx="4e-06" iyy="5e-06" izz="7e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.009816 0.009875 -0.045325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.009816 0.009875 -0.045325" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo2_1">
+  <inertial>
+    <origin xyz="-0.024601330001611965 0.008917180958471833 -0.00586972037019011" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="5e-06" iyy="6e-06" izz="9e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.007584 0.01888 -0.071199" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.007584 0.01888 -0.071199" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__1__1">
+  <inertial>
+    <origin xyz="-3.2019847578945715e-07 0.0003171668897327465 -2.6593740096170215e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.026993 0.03519 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.026993 0.03519 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="-0.04075884618891786 0.02432499553807831 3.1058543849271647e-07" rpy="0 0 0"/>
+    <mass value="0.015570832110198175"/>
+    <inertia ixx="9e-06" iyy="8e-06" izz="1.5e-05" ixy="-1e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.033993 0.03619 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.033993 0.03619 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="-0.09000037619134806 4.929812195200722e-07 3.1058545595097353e-07" rpy="0 0 0"/>
+    <mass value="0.026038399558895264"/>
+    <inertia ixx="2e-06" iyy="7.1e-05" izz="7.1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.086993 0.02519 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.086993 0.02519 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_2_1">
+  <inertial>
+    <origin xyz="-0.001984174948017947 -0.009249694033099217 3.105854457369217e-07" rpy="0 0 0"/>
+    <mass value="0.004655156929618343"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.266993 0.02519 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.266993 0.02519 -0.065329" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo3_1">
+  <inertial>
+    <origin xyz="-0.005874345235702405 -0.008916194996032994 -0.024197965195677795" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="9e-06" iyy="6e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.276119 0.027185 -0.089729" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.276119 0.027185 -0.089729" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__2__1">
+  <inertial>
+    <origin xyz="-3.201984758449683e-07 -0.0003161809272936751 6.57516915220091e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.281993 0.010875 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.281993 0.010875 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="3.1631360504436046e-05 0.035446162709745384 -0.0070185772432957705" rpy="0 0 0"/>
+    <mass value="0.017280612223675156"/>
+    <inertia ixx="8e-06" iyy="3e-06" izz="9e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.281993 0.009875 -0.082507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.281993 0.009875 -0.082507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1">
+  <inertial>
+    <origin xyz="0.04999962380865153 4.929812194923167e-07 8.099405844619323e-08" rpy="0 0 0"/>
+    <mass value="0.005840220743023432"/>
+    <inertia ixx="0.0" iyy="5e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.301993 -0.049125 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.301993 -0.049125 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_2_1">
+  <inertial>
+    <origin xyz="0.008605659950406186 0.005275702056408087 8.249900623757966e-08" rpy="0 0 0"/>
+    <mass value="0.005673941122982631"/>
+    <inertia ixx="2e-06" iyy="3e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.201993 -0.049125 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_5_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.201993 -0.049125 -0.075507" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_5_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo4_1">
+  <inertial>
+    <origin xyz="-0.008917064168600747 0.0058744620255726104 -0.024198194787073718" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="6e-06" iyy="9e-06" izz="5e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.168373 -0.040301 -0.099907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.168373 -0.040301 -0.099907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__3__1">
+  <inertial>
+    <origin xyz="-0.0003170500998615766 5.489740910122332e-07 -7.251201942504171e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.152063 -0.046175 -0.085685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.152063 -0.046175 -0.085685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_1">
+  <inertial>
+    <origin xyz="0.0035026235716237863 -8.650205953186774e-05 -0.0070001485973373995" rpy="0 0 0"/>
+    <mass value="0.0030789946205401243"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.151063 -0.046175 -0.092685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.151063 -0.046175 -0.092685" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo5_1">
+  <inertial>
+    <origin xyz="-0.005874852254482754 -0.008916194996033619 -0.024198424378469335" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="9e-06" iyy="6e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.131193 -0.05518 -0.110085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.131193 -0.05518 -0.110085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__4__1">
+  <inertial>
+    <origin xyz="6.079699876870848e-08 -0.0003161809272945043 -9.54711590020474e-07" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.137068 -0.07149 -0.095863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.137068 -0.07149 -0.095863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_7_1">
+  <inertial>
+    <origin xyz="1.1678986963636895e-07 0.0035213705537099765 -0.01178394996947886" rpy="0 0 0"/>
+    <mass value="0.0024697393548202117"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.137068 -0.07249 -0.102863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.137068 -0.07249 -0.102863" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/link_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo6_1">
+  <inertial>
+    <origin xyz="0.02419839257100337 -0.005869537974427394 -0.008917066165985407" rpy="0 0 0"/>
+    <mass value="0.03217556547489919"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="6e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.161468 -0.09236 -0.103483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.161468 -0.09236 -0.103483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_horn_v1__5__1">
+  <inertial>
+    <origin xyz="4.023741395353664e-07 -8.354163821833183e-08 -0.00031705209724625094" rpy="0 0 0"/>
+    <mass value="0.0017252178816979493"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.147246 -0.08649 -0.119793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.147246 -0.08649 -0.119793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/servo_horn_v1__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tool-01_v1_1">
+  <inertial>
+    <origin xyz="0.011798489956976882 -9.166403155111413e-06 0.01186032722826573" rpy="0 0 0"/>
+    <mass value="0.00259877806362243"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.154246 -0.08649 -0.120793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/tool-01_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.154246 -0.08649 -0.120793" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ASSY-PT_description/meshes/tool-01_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin xyz="-0.002593 -0.015745 0.028015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="servo1_1"/>
+</joint>
+
+<joint name="Rev2" type="revolute">
+  <origin xyz="-0.014223 0.00587 0.01631" rpy="0 0 0"/>
+  <parent link="servo1_1"/>
+  <child link="servo_horn_v1_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin xyz="0.007 0.0 0.001" rpy="0 0 0"/>
+  <parent link="servo_horn_v1_1"/>
+  <child link="link_1_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin xyz="0.0174 -0.009005 0.025874" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="servo2_1"/>
+</joint>
+
+<joint name="Rev5" type="revolute">
+  <origin xyz="-0.034577 -0.01631 -0.00587" rpy="0 0 0"/>
+  <parent link="servo2_1"/>
+  <child link="servo_horn_v1__1__1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin xyz="-0.007 -0.001 0.0" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__1__1"/>
+  <child link="link_2_1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin xyz="-0.053 0.011 0.0" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="link_3_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin xyz="-0.18 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="link_3_2_1"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin xyz="-0.009126 -0.001995 0.0244" rpy="0 0 0"/>
+  <parent link="link_3_2_1"/>
+  <child link="servo3_1"/>
+</joint>
+
+<joint name="Rev10" type="revolute">
+  <origin xyz="-0.005874 0.01631 -0.014222" rpy="0 0 0"/>
+  <parent link="servo3_1"/>
+  <child link="servo_horn_v1__2__1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid23" type="fixed">
+  <origin xyz="0.0 0.001 0.007" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__2__1"/>
+  <child link="link_4_1"/>
+</joint>
+
+<joint name="Rigid24" type="fixed">
+  <origin xyz="-0.02 0.059 -0.007" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="link_5_1"/>
+</joint>
+
+<joint name="Rigid25" type="fixed">
+  <origin xyz="0.1 0.0 0.0" rpy="0 0 0"/>
+  <parent link="link_5_1"/>
+  <child link="link_5_2_1"/>
+</joint>
+
+<joint name="Rigid26" type="fixed">
+  <origin xyz="0.03362 -0.008824 0.0244" rpy="0 0 0"/>
+  <parent link="link_5_2_1"/>
+  <child link="servo4_1"/>
+</joint>
+
+<joint name="Rev27" type="revolute">
+  <origin xyz="0.01631 0.005874 -0.014222" rpy="0 0 0"/>
+  <parent link="servo4_1"/>
+  <child link="servo_horn_v1__3__1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid28" type="fixed">
+  <origin xyz="0.001 0.0 0.007" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__3__1"/>
+  <child link="link_6_1"/>
+</joint>
+
+<joint name="Rigid29" type="fixed">
+  <origin xyz="0.01987 0.009005 0.0174" rpy="0 0 0"/>
+  <parent link="link_6_1"/>
+  <child link="servo5_1"/>
+</joint>
+
+<joint name="Rev30" type="revolute">
+  <origin xyz="-0.005875 0.01631 -0.014222" rpy="0 0 0"/>
+  <parent link="servo5_1"/>
+  <child link="servo_horn_v1__4__1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin xyz="0.0 0.001 0.007" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__4__1"/>
+  <child link="link_7_1"/>
+</joint>
+
+<joint name="Rigid32" type="fixed">
+  <origin xyz="-0.0244 0.01987 0.00062" rpy="0 0 0"/>
+  <parent link="link_7_1"/>
+  <child link="servo6_1"/>
+</joint>
+
+<joint name="Rev33" type="revolute">
+  <origin xyz="0.014222 -0.00587 0.01631" rpy="0 0 0"/>
+  <parent link="servo6_1"/>
+  <child link="servo_horn_v1__5__1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit upper="6.283185" lower="3.141593" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid34" type="fixed">
+  <origin xyz="-0.007 0.0 0.001" rpy="0 0 0"/>
+  <parent link="servo_horn_v1__5__1"/>
+  <child link="tool-01_v1_1"/>
+</joint>
+
+</robot>
