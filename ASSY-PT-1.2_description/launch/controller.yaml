@@ -1,0 +1,31 @@
+ASSY-PT-1.2_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  Rev2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev5
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev10_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev10
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev15_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev15
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev18_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev18
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev21_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev21
+    pid: {p: 100.0, i: 0.01, d: 10.0}
